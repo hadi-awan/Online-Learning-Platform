@@ -25,6 +25,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String role; // e.g. USER, ADMIN
 
+    @Column(nullable = false)
+    private String email;
+
     public Long getId() {
         return id;
     }
@@ -49,6 +52,14 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getRole() {
